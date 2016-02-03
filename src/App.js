@@ -6,6 +6,8 @@ import OrdersList from './components/OrdersList';
 
 import { addOrder, removeOrder } from './actions'
 
+import styles from './styles/styles.styl'
+
 
 // Which part of the Redux global state does our component want to receive as props?
 function mapStateToProps(state) {
@@ -30,7 +32,7 @@ class App extends Component {
           value={this.props.value} 
           addOrder={this.props.addOrder}
         />
-        <hr />
+
         <OrdersList
           value={this.props.value} 
           removeOrder={this.props.removeOrder}

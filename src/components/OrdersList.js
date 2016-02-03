@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 export default class OrdersList extends Component {
   render() {
+
     let ordersList = this.props.value.currentOrder.map((order, key) => {
       const { id, name, type, size, sugar } = order
       return (
@@ -19,21 +20,27 @@ export default class OrdersList extends Component {
       )
     })
     return (
-      <div className="container">
-        <table className="table">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Coffee</th>
-              <th>Size</th>
-              <th>Sugar?</th>
-              <th>Delete</th>
-            </tr>
-          </thead>
-          <tbody>
-            {ordersList}
-          </tbody>
-        </table>
+      <div className="order-list">
+        <div className="container">
+          <table className="table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Coffee</th>
+                <th>Size</th>
+                <th>Sugar?</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              {ordersList}
+            </tbody>
+          </table>
+          {
+            !this.props.value.currentOrder.length
+              && <p>No orders yet.. but i can smell them coming!</p>
+          }
+        </div>
       </div>
     )
   }
