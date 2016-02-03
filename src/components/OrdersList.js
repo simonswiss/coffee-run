@@ -41,8 +41,6 @@ export default class OrdersList extends Component {
               && <p>No orders yet.. but i can smell them coming!</p>
           }
         </div>
-        <p>heooooo</p>
-        <p>heooooo</p><p>heooooo</p><p>heooooo</p><p>heooooo</p><p>heooooo</p><p>heooooo</p><p>heooooo</p><p>heooooo</p><p>heooooo</p><p>heooooo</p><p>heooooo</p><p>heooooo</p><p>heooooo</p><p>heooooo</p>
       </div>
     )
   }
