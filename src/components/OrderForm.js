@@ -2,20 +2,21 @@ import React, { Component } from 'react'
 
 export default class OrderForm extends Component {
   render() {
-    let { menu } = this.props.value
-    let coffeeTypes = menu.types.map((type, key) =>
+    const { menu } = this.props.value
+    const coffeeTypes = menu.types.map((type, key) =>
       <RadioInput name="type" key={key} value={type} />
     )
-    let coffeeSizes = menu.sizes.map((size, key) =>
+    const coffeeSizes = menu.sizes.map((size, key) =>
       <RadioInput name="size" key={key} value={size} />
     )
-    let coffeeSugar = menu.sugar.map((sugar, key) =>
+    const coffeeSugar = menu.sugar.map((sugar, key) =>
       <RadioInput name="sugar" key={key} value={sugar} />
     )
     return (
       <div className="order-form">
         <div className="container">
           <div className="row">
+            <h1 className="order-form-title">¯\_(ツ)_/¯ - coffee time!</h1>
             <div className="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
 
               <form
@@ -24,25 +25,28 @@ export default class OrderForm extends Component {
                 onSubmit={this.placeOrder.bind(this)} action="">
 
                 <div className="form-group">
-                  <label>Your name</label>
+                  <h4 className="order-form-desc">My name is...</h4>
                   <input 
                     required
                     name="name"
                     type="text" 
                     className="form-control" 
-                    placeholder="Johny Sleepyhead" 
+                    placeholder="Jim Sleepyhead" 
                   />
                 </div>
                 
                 <div className="form-group">
+                  <h4 className="order-form-desc">Coffee Type</h4>
                   {coffeeTypes}
                 </div>
 
                 <div className="form-group">
+                  <h4 className="order-form-desc">Size</h4>
                   {coffeeSizes}
                 </div>
 
                 <div className="form-group">
+                  <h4 className="order-form-desc">Sugar?</h4>
                   {coffeeSugar}
                 </div>
 

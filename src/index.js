@@ -14,22 +14,7 @@ const defaultState = {
     sizes: ['Small', 'Regular', 'Large'],
     sugar: [0, 1, 2, 'seriously??']
   },
-  currentOrder: [
-    {
-      id: 0,
-      name: 'Simon',
-      type: 'Latte',
-      size: 'Large',
-      sugar: 1
-    },
-    {
-      id: 1,
-      name: 'Rod',
-      type: 'Long black',
-      size: 'Small',
-      sugar: 0
-    }
-  ]
+  currentOrder: []
 }
 
 // REDUCER
