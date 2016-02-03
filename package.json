@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A coffee ordering app, built for learning React, Redux and much more!",
   "scripts": {
-    "clean": "rimraf dist",
+    "clean": "rimraf dist/bundle.*",
     "build:webpack": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
     "build": "npm run clean && npm run build:webpack",
     "surge": "surge -p dist -d https://coffee-run.surge.sh",
@@ -53,6 +53,7 @@
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
     "react-redux": "^4.2.0",
-    "redux": "^3.2.0"
+    "redux": "^3.2.0",
+    "scroll-to-element": "^1.1.0"
   }
 }

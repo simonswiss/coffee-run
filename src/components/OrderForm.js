@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import scrollToElement from 'scroll-to-element'
+
 export default class OrderForm extends Component {
   render() {
     const { menu } = this.props.value
@@ -57,9 +59,20 @@ export default class OrderForm extends Component {
 
             </div>
           </div>
+          <div className="order-form-link-wrapper">
+            <a 
+              className="order-form-link" 
+              href="#"
+              onClick={this.scrollTo.bind(this)}>View Orders List</a>
+          </div>
         </div>
       </div>
     )
+  }
+  scrollTo(e) {
+    e.preventDefault()
+    const target = document.getElementById('ordersList')
+    scrollToElement(target)
   }
   placeOrder(e) {
     e.preventDefault()
