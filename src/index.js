@@ -10,9 +10,9 @@ import { ADD_ORDER, REMOVE_ORDER } from './actions';
 // DEFAULT STATE
 const defaultState = {
   menu : {
-    types: ['Latte', 'Long Black', 'Flat White', 'Cappuccino'],
+    types: ['Latte', 'Long Black', 'Flat White', 'Cappuccino', 'Ice Coffee'],
     sizes: ['Small', 'Regular', 'Large'],
-    sugar: [0, 1, 2, 'seriously??']
+    sugar: [0, 1, 2, 3, 'seriously??']
   },
   currentOrder: []
 }
