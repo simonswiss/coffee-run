@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-
 import scrollToElement from 'scroll-to-element'
+
+import styles from './OrderForm.styl'
 
 export default class OrderForm extends Component {
   render() {

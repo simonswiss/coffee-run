@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import OrderForm from './components/OrderForm';
-import OrdersList from './components/OrdersList';
+import OrderForm from './components/OrderForm/OrderForm';
+import OrdersList from './components/OrdersList/OrdersList';
 
 import { addOrder, removeOrder } from './actions'
 

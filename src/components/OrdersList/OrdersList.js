@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import styles from './OrdersList.styl'
+
 export default class OrdersList extends Component {
   render() {
 
