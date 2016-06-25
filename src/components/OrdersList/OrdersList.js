@@ -23,26 +23,24 @@ export default class OrdersList extends Component {
     })
     return (
       <div id="ordersList" className="order-list">
-        <div className="container">
-          <table className="table">
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Coffee</th>
-                <th>Size</th>
-                <th>Sugar?</th>
-                <th>Delete</th>
-              </tr>
-            </thead>
-            <tbody>
-              {ordersList}
-            </tbody>
-          </table>
-          {
-            !this.props.value.currentOrder.length
-              && <p>No orders yet.. but i can smell them coming!</p>
-          }
-        </div>
+        <table className="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Coffee</th>
+              <th>Size</th>
+              <th>Sugar?</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            {ordersList}
+          </tbody>
+        </table>
+        {
+          !this.props.value.currentOrder.length
+            && <p>No orders yet.. but i can smell them coming!</p>
+        }
       </div>
     )
   }

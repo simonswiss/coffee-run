@@ -1,18 +1,19 @@
+$border = rgba(56, 73, 75, 0.1)
+$text = #31484b
+$active = #bff2bc
+
 .order-form
-  padding 3rem 0 4rem
-  background lighten(#bada55, 0)
   
   &-title
     text-align center
     font-weight 900
-    color darken(#bada55, 35)
-    margin 1rem 0 2rem
+    margin 3rem 0
   
   &-widget
-    background rgba(255,255,255,0.5)
+    background white
     padding 2rem 3rem
     border-radius 6px
-    box-shadow 0 10px 30px rgba(0,0,0,0.1)
+    box-shadow 0 10px 40px rgba(black,0.1)
     
   &-desc
     font-weight 600
@@ -30,4 +31,79 @@
     &:hover, &:active, &:focus
       color darken(#bada55, 45)
       text-decoration none
+
+
+.order__input
+  padding 1.5rem
+  border solid 4px $border
+  border-radius 0
+  box-shadow none
+  outline none
+  
+  &:focus, &:active
+    border-color $active
+    box-shadow none
+
+
+.button
+  
+  &__submit
+    margin 2rem 0
+    border-radius 0
+    padding 1.5rem 2rem
+    border none
+    box-shadow 0 15px 20px rgba(black, 0.1)
+    transition box-shadow 0.1s
+    background desaturate(darken($active, 20), 15)
+    
+    &:hover
+      background desaturate(darken($active, 25), 20) !important
+      box-shadow 0 10px 15px rgba(black, 0.1)
+      
+    &:active, 
+    &:focus
+      background desaturate(darken($active, 25), 15) !important
+
+.radio 
+  
+  &__list
+    display flex
+    flex-wrap wrap
+    justify-content center
+  
+  &__wrapper
+    position relative
+    flex 1 1 120px
+    cursor pointer
+    margin .1rem
+      
+  &__text
+    display block
+    background $border
+    color #31484b
+    text-transform uppercase
+    font-size .8rem
+    text-align center
+    font-weight 500
+    cursor pointer
+    padding .75rem 1rem
+    
+    &:hover
+      background lighten($active, 7)
+    
+  &__label
+    margin 0
+    display block
+  
+  &__input
+    position absolute
+    top 0
+    left 0
+    // visibility hidden
+    height 0
+    width 0
+    opacity 0
+    
+    &:checked ~ .radio__text
+      background $active
     
